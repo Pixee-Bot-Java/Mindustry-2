@@ -1181,6 +1181,7 @@ public class Blocks{
             rotate = true;
             invertFlip = true;
             group = BlockGroup.liquids;
+            itemCapacity = 0;
 
             liquidCapacity = 50f;
 
@@ -1231,6 +1232,7 @@ public class Blocks{
             }});
 
             researchCostMultiplier = 1.1f;
+            itemCapacity = 0;
             liquidCapacity = 40f;
             consumePower(2f);
             ambientSound = Sounds.extractLoop;
@@ -2782,6 +2784,7 @@ public class Blocks{
             ambientSoundVolume = 0.06f;
             hasLiquids = true;
             boostScale = 1f / 9f;
+            itemCapacity = 0;
             outputLiquid = new LiquidStack(Liquids.water, 30f / 60f);
             consumePower(0.5f);
             liquidCapacity = 60f;
@@ -4046,7 +4049,7 @@ public class Blocks{
             researchCostMultiplier = 0.05f;
 
             coolant = consume(new ConsumeLiquid(Liquids.water, 15f / 60f));
-            limitRange();
+            limitRange(12f);
         }};
 
         diffuse = new ItemTurret("diffuse"){{
@@ -4105,7 +4108,7 @@ public class Blocks{
             rotateSpeed = 3f;
 
             coolant = consume(new ConsumeLiquid(Liquids.water, 15f / 60f));
-            limitRange();
+            limitRange(25f);
         }};
 
         sublimate = new ContinuousLiquidTurret("sublimate"){{
@@ -4355,7 +4358,7 @@ public class Blocks{
             coolant = consume(new ConsumeLiquid(Liquids.water, 20f / 60f));
             coolantMultiplier = 2.5f;
 
-            limitRange(-5f);
+            limitRange(5f);
         }};
 
         afflict = new PowerTurret("afflict"){{
@@ -5791,6 +5794,8 @@ public class Blocks{
             heatOutput = 1000f;
             warmupRate = 1000f;
             regionRotated1 = 1;
+            itemCapacity = 0;
+            alwaysUnlocked = true;
             ambientSound = Sounds.none;
         }};
 

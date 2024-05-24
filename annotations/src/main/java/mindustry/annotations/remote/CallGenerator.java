@@ -16,6 +16,9 @@ import static mindustry.annotations.BaseProcessor.*;
 /** Generates code for writing remote invoke packets on the client and server. */
 public class CallGenerator{
 
+private CallGenerator() {
+}
+
     /** Generates all classes in this list. */
     public static void generate(ClassSerializer serializer, Seq<MethodEntry> methods) throws IOException{
         //create builder
